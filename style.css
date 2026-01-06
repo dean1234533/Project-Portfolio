@@ -1,0 +1,157 @@
+*{box-sizing: border-box;}
+
+      body{display: flex;justify-content: center;align-items: center;margin: 0;min-height: 100vh;background-color: #00000079;}
+
+      .container{
+        border: 1px solid black;
+       background-color: white;
+min-height: 297mm;width: 360mm;max-width: 95vw;}
+
+body#tinymce {
+background: #FFFFFF}
+
+      .print-button{position: fixed;top: 40px;left: 73%;padding: 10px;width: 20%;background-color: rgb(44, 29, 121);border: none;border-radius: 5px;z-index: 1;color: white;border: 1px solid white;}
+
+      
+     
+      .header{ background: linear-gradient(50deg, #0f0fc7d8 0%, #201e22 100%);margin: 20px;text-align: center; position: relative;border-bottom:2px solid #000000;}
+
+      .header h1{padding-top: 30px;color: white;}
+
+      .contact-info {padding: 5px;color: white;}
+
+      .content{background-color: white;margin: 20px;margin-top: -20px;padding: 20px;display: grid; grid-template-columns: 1fr 1fr;padding: 20px;gap: 20px;}
+
+      .section{margin: 20px;}
+
+      .professional-summary{display: flex;background-color: white;margin: 20px;margin-top: -19px;border-bottom: 1px solid black;flex-direction: column;padding: 20px;}
+
+      .section-title, .sectionTitle {
+        color: #2c3e50;
+        font-size: 1.3em;
+        margin-bottom: 10px;
+      }
+
+      .cv-img{height: 150px;width: 150px;border-radius: 50%;background-color: #9c9fa1;position: relative;border: 2px solid white;}
+
+      .img-container{position: relative;top: 30px;}
+      hr {
+        border: none;
+        border-top: 2px solid #3498db;
+        margin-bottom: 15px;
+      }
+
+      .summary {
+        text-align: justify;
+        line-height: 1.8;
+      }
+
+      .skills-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .skill-item {
+        padding: 10px;
+        background: #f8f9fa;
+        border-left: 3px solid #3498db;
+      }
+
+      .skill-item strong {
+        display: block;
+        color: #2c3e50;
+        margin-bottom: 5px;
+      }
+
+      .educationItem, .experienceItem {
+        margin-bottom: 20px;
+      }
+
+      .educationItem h3, .experienceItem h3 {
+        color: #2c3e50;
+        margin-bottom: 5px;
+      }
+
+      .educationDate, .experienceMeta {
+        color: #666;
+        font-style: italic;
+        margin-bottom: 10px;
+      }
+
+      .experienceItem ul, .transferableSkills ul {
+        margin-left: 20px;
+        margin-top: 10px;
+      }
+
+      .experienceItem li, .transferableSkills li {
+        margin-bottom: 8px;
+      }
+
+  @media print {
+    /* Hide the button */
+    .buttonContainer,
+    .print-button {
+        display: none !important;
+    }
+    
+    /* Force all colors and backgrounds to print */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+    
+    /* Reset body */
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+        width: 100% !important;
+        max-width: none !important;
+    }
+    
+    /* Keep container styling but remove shadows */
+    .container {
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        background: gray;
+        min-height: 100vh;
+        width: 100% !important;
+        max-width: none !important;
+        transform: none !important;
+    }
+    
+    /* Maintain header gradient */
+    .header {
+        background: linear-gradient(50deg, #0f0fc7d8 0%, #201e22 100%);
+        page-break-inside: avoid;
+        width: 100% !important;
+    }
+    
+    /* Keep all spacing as-is */
+    .content {
+        page-break-inside: avoid;
+        width: 100% !important;
+    }
+    
+    /* Ensure two-column layout stays */
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100% !important;
+    }
+}
+
+@page {
+    size: A4 portrait;
+    margin: 10mm;
+}
+      @media (max-width: 768px) {
+        .content {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      
