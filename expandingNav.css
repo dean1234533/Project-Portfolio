@@ -7,7 +7,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Navigation Bar */
+
 .navBar {
     display: flex;
     align-items: center;
@@ -35,7 +35,7 @@ body {
 
 
 
-.navBar.active.scrolled{ background:linear-gradient(50deg, black, blue);height: 90px;}  
+.navBar.active.scrolled{ background:linear-gradient(50deg, black, blue);height: 80px;transition: ease 1.2s;}  
 
 .navBar a{display: inline-flex;}
 
@@ -160,7 +160,7 @@ z-index: 1000;
     top: 15px;
 }
 
-/* Collapsed Navigation State */
+
 .navBar.active {
     height: 70px;
     transition: all 0.6s;
